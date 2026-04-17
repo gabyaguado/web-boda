@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Confirmación de asistencia · Boda Ester y Gaby · 11 de julio de 2026">
+  <title>Confirmar asistencia · Ester &amp; Gaby</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Imagenes/Favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Great+Vibes&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="form-page">
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">E &amp; G</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="index.html#itinerario" class="nav-link">Itinerario</a></li>
+        <li><a href="index.html#hoteles" class="nav-link">Hoteles</a></li>
+        <li><a href="index.html#lista-bodas" class="nav-link">Lista de Bodas</a></li>
+        <li><a href="confirmacion.html" class="nav-cta-link">Confirmación</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== FORM HERO ===================== -->
+  <header class="form-hero">
+    <p class="form-hero-names">Ester &amp; Gaby</p>
+    <p class="form-hero-notice">
+      Se ruega confirmación de asistencia antes del
+      <span class="form-notice-date">1 de junio de 2026</span>
+    </p>
+  </header>
+
+  <!-- ===================== FORM ===================== -->
+  <main class="form-wrapper">
+
+    <!--
+      INTEGRACIÓN CON GOOGLE APPS SCRIPT:
+      Sustituye el atributo action con la URL de tu Web App de Google Apps Script.
+      Ejemplo: action="https://script.google.com/macros/s/XXXXXXXX/exec"
+    -->
+    <form
+      class="rsvp-form"
+      id="rsvpForm"
+      action="PENDIENTE_URL_APPS_SCRIPT"
+      method="POST"
+      novalidate
+    >
+
+      <!-- Nombre y apellidos -->
+      <div class="form-group">
+        <label for="nombre">
+          Nombre y apellidos
+          <span class="required" aria-label="obligatorio">*</span>
+        </label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Tu nombre completo"
+          required
+          autocomplete="name"
+        >
+      </div>
+
+      <!-- Acompañantes -->
+      <div class="form-group">
+        <label for="acompanantes">
+          Nº de acompañantes y nombre y apellidos
+          <span class="required" aria-label="obligatorio">*</span>
+        </label>
+        <textarea
+          id="acompanantes"
+          name="acompanantes"
+          rows="3"
+          placeholder="Indica cuántos acompañantes vendrán y sus nombres completos. Si vienes solo/a, escribe 'Ninguno'."
+          required
+        ></textarea>
+      </div>
+
+      <!-- Alergias -->
+      <div class="form-group">
+        <label for="alergias">
+          Alergias o intolerancias
+          <span class="optional">(opcional)</span>
+        </label>
+        <textarea
+          id="alergias"
+          name="alergias"
+          rows="2"
+          placeholder="Indícanos si tienes alguna alergia o intolerancia alimentaria."
+        ></textarea>
+      </div>
+
+      <hr class="form-divider">
+
+      <!-- Autobús -->
+      <fieldset class="bus-section">
+        <legend class="bus-section-title">
+          Autobús
+          <span class="optional" style="font-family:var(--font-sans); font-size:0.75rem; color:var(--text-light); font-style:italic; font-weight:300;">(opcional)</span>
+        </legend>
+
+        <!-- Ida -->
+        <p class="bus-section-subtitle">Ida</p>
+        <label class="check-label">
+          <input type="checkbox" name="autobus_ida" id="autobus_ida" value="Sí, ida 17:00">
+          Sí, quiero el autobús de ida (17:00)
+        </label>
+
+        <!-- Vuelta -->
+        <p class="bus-section-subtitle" style="margin-top:1rem;">Vuelta</p>
+        <div class="radio-group" role="radiogroup" aria-label="Hora de vuelta del autobús">
+          <label class="radio-label">
+            <input type="radio" name="autobus_vuelta" value="Sin autobús de vuelta" checked>
+            No necesito autobús de vuelta
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="autobus_vuelta" value="Vuelta 01:30">
+            Vuelta a las 01:30 h
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="autobus_vuelta" value="Vuelta 04:30">
+            Vuelta a las 04:30 h
+          </label>
+        </div>
+      </fieldset>
+
+      <hr class="form-divider">
+
+      <!-- Mensaje -->
+      <div class="form-group">
+        <label for="mensaje">
+          Mensaje para los novios
+          <span class="optional">(opcional)</span>
+        </label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="3"
+          placeholder="¿Quieres decirnos algo? ¡Nos encantará leerlo!"
+        ></textarea>
+      </div>
+
+      <!-- Enviar -->
+      <div class="form-submit">
+        <button type="submit" class="submit-btn" id="submitBtn">
+          Confirmar asistencia
+        </button>
+      </div>
+
+      <!-- Mensajes de estado -->
+      <div class="form-status" id="formStatus" role="alert" aria-live="polite"></div>
+
+    </form>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-names">Ester &amp; Gaby</p>
+      <p class="footer-date">11 de julio de 2026 · Con amor</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
