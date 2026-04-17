@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Boda de Ester y Gaby · 11 de julio de 2026 · Casa Santonja, Beniarbeig">
+  <title>Ester &amp; Gaby · 11.07.2026</title>
+
+  <link rel="icon" type="image/png" href="Imagenes/Favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Great+Vibes&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     NAVEGACIÓN
+     ══════════════════════════════════════ -->
+<header class="site-header" id="site-header">
+  <nav class="nav-wrap" aria-label="Navegación principal">
+    <a href="#inicio" class="nav-logo" aria-label="Inicio">E &amp; G</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="nav-menu" role="list">
+      <li><a href="#itinerario">Itinerario</a></li>
+      <li><a href="#hoteles">Alojamiento</a></li>
+      <li><a href="#lista-bodas">Lista de bodas</a></li>
+      <li><a href="confirmacion.html" class="nav-cta-link">Confirmar asistencia</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ══════════════════════════════════════
+       HERO — imagen protagonista centrada
+       ══════════════════════════════════════ -->
+  <section class="hero" id="inicio">
+    <div class="hero-inner">
+
+      <!-- Imagen: protagonista, centrada, grande -->
+      <div class="hero-img-wrap reveal">
+        <img
+          src="Imagenes/toWEBP/SantonjaAcuarela1.webp"
+          alt="Casa Santonja, Beniarbeig — ilustración en acuarela"
+          loading="eager"
+        >
+      </div>
+
+      <!-- Datos de la boda -->
+      <div class="hero-text reveal">
+        <p class="hero-eyebrow">11 · 07 · 2026</p>
+        <h1 class="hero-names">
+          Ester <span class="hero-ampersand">&amp;</span> Gaby
+        </h1>
+        <p class="hero-date">11 de julio de 2026</p>
+        <p class="hero-location">Casa Santonja · Beniarbeig</p>
+
+        <!-- Cuenta atrás -->
+        <div class="countdown" id="countdown" role="timer" aria-label="Cuenta atrás para la boda">
+          <div class="countdown-unit">
+            <span class="countdown-num" id="cd-days">--</span>
+            <span class="countdown-label">días</span>
+          </div>
+          <span class="countdown-sep" aria-hidden="true">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-num" id="cd-hours">--</span>
+            <span class="countdown-label">horas</span>
+          </div>
+          <span class="countdown-sep" aria-hidden="true">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-num" id="cd-min">--</span>
+            <span class="countdown-label">min</span>
+          </div>
+          <span class="countdown-sep" aria-hidden="true">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-num" id="cd-sec">--</span>
+            <span class="countdown-label">seg</span>
+          </div>
+        </div>
+
+        <a href="confirmacion.html" class="btn btn-primary">Confirmar asistencia</a>
+      </div>
+
+    </div>
+
+    <!-- Hortensias SVG — transición al itinerario -->
+    <div class="hydrangea-wrap" role="img" aria-label="Decoración floral de hortensias en acuarela">
+      <svg class="hydrangea-band" viewBox="0 0 1000 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <defs>
+          <filter id="h-soft" x="-15%" y="-15%" width="130%" height="130%">
+            <feGaussianBlur stdDeviation="0.8"/>
+          </filter>
+          <!-- Floret azul -->
+          <symbol id="hf-b" overflow="visible">
+            <ellipse cx="0" cy="-8.5" rx="5.5" ry="8.5" fill="#b8cede" opacity="0.82"/>
+            <ellipse cx="8.5" cy="0" rx="8.5" ry="5.5" fill="#9ab5cc" opacity="0.78"/>
+            <ellipse cx="0" cy="8.5" rx="5.5" ry="8.5" fill="#b8cede" opacity="0.82"/>
+            <ellipse cx="-8.5" cy="0" rx="8.5" ry="5.5" fill="#9ab5cc" opacity="0.78"/>
+            <circle cx="0" cy="0" r="2.2" fill="#eaf5fc" opacity="0.60"/>
+          </symbol>
+          <!-- Floret lavanda -->
+          <symbol id="hf-l" overflow="visible">
+            <ellipse cx="0" cy="-8.5" rx="5.5" ry="8.5" fill="#c5b8d8" opacity="0.80"/>
+            <ellipse cx="8.5" cy="0" rx="8.5" ry="5.5" fill="#b5a8cc" opacity="0.76"/>
+            <ellipse cx="0" cy="8.5" rx="5.5" ry="8.5" fill="#c5b8d8" opacity="0.80"/>
+            <ellipse cx="-8.5" cy="0" rx="8.5" ry="5.5" fill="#b5a8cc" opacity="0.76"/>
+            <circle cx="0" cy="0" r="2.2" fill="#ede8f8" opacity="0.60"/>
+          </symbol>
+          <!-- Floret azul pálido -->
+          <symbol id="hf-p" overflow="visible">
+            <ellipse cx="0" cy="-8.5" rx="5.5" ry="8.5" fill="#cce0ec" opacity="0.80"/>
+            <ellipse cx="8.5" cy="0" rx="8.5" ry="5.5" fill="#b8d0e4" opacity="0.76"/>
+            <ellipse cx="0" cy="8.5" rx="5.5" ry="8.5" fill="#cce0ec" opacity="0.80"/>
+            <ellipse cx="-8.5" cy="0" rx="8.5" ry="5.5" fill="#b8d0e4" opacity="0.76"/>
+            <circle cx="0" cy="0" r="2.2" fill="#e8f5fc" opacity="0.60"/>
+          </symbol>
+        </defs>
+
+        <!-- Hojas — izquierda -->
+        <ellipse cx="72"  cy="150" rx="17" ry="9"  fill="#8fae8f" transform="rotate(-38,72,150)"  opacity="0.68"/>
+        <ellipse cx="132" cy="142" rx="19" ry="10" fill="#a8c4a8" transform="rotate(-22,132,142)" opacity="0.64"/>
+        <ellipse cx="200" cy="145" rx="16" ry="8"  fill="#8fae8f" transform="rotate(-8,200,145)"  opacity="0.66"/>
+        <ellipse cx="44"  cy="162" rx="14" ry="7"  fill="#7a9e7e" transform="rotate(-48,44,162)"  opacity="0.62"/>
+        <ellipse cx="168" cy="140" rx="15" ry="7"  fill="#a8c4a8" transform="rotate(-18,168,140)" opacity="0.60"/>
+        <ellipse cx="248" cy="148" rx="14" ry="7"  fill="#8fae8f" transform="rotate(5,248,148)"   opacity="0.62"/>
+        <!-- Hojas — derecha -->
+        <ellipse cx="928" cy="150" rx="17" ry="9"  fill="#8fae8f" transform="rotate(38,928,150)"  opacity="0.68"/>
+        <ellipse cx="868" cy="142" rx="19" ry="10" fill="#a8c4a8" transform="rotate(22,868,142)"  opacity="0.64"/>
+        <ellipse cx="800" cy="145" rx="16" ry="8"  fill="#8fae8f" transform="rotate(8,800,145)"   opacity="0.66"/>
+        <ellipse cx="956" cy="162" rx="14" ry="7"  fill="#7a9e7e" transform="rotate(48,956,162)"  opacity="0.62"/>
+        <ellipse cx="832" cy="140" rx="15" ry="7"  fill="#a8c4a8" transform="rotate(18,832,140)"  opacity="0.60"/>
+        <ellipse cx="752" cy="148" rx="14" ry="7"  fill="#8fae8f" transform="rotate(-5,752,148)"  opacity="0.62"/>
+
+        <!-- Grupo izquierdo -->
+        <g filter="url(#h-soft)">
+          <use href="#hf-p" transform="translate(42,178)  scale(1.15)"/>
+          <use href="#hf-b" transform="translate(98,172)  scale(1.22)"/>
+          <use href="#hf-l" transform="translate(156,168) scale(1.18)"/>
+          <use href="#hf-p" transform="translate(214,170) scale(1.14)"/>
+          <use href="#hf-b" transform="translate(268,174) scale(1.08)"/>
+          <use href="#hf-b" transform="translate(70,155)  scale(1.36)"/>
+          <use href="#hf-l" transform="translate(128,150) scale(1.42)"/>
+          <use href="#hf-p" transform="translate(186,149) scale(1.40)"/>
+          <use href="#hf-b" transform="translate(243,153) scale(1.32)"/>
+          <use href="#hf-l" transform="translate(296,158) scale(1.20)"/>
+          <use href="#hf-l" transform="translate(54,132)  scale(1.28)"/>
+          <use href="#hf-b" transform="translate(112,128) scale(1.46)"/>
+          <use href="#hf-p" transform="translate(170,125) scale(1.50)"/>
+          <use href="#hf-l" transform="translate(228,129) scale(1.40)"/>
+          <use href="#hf-b" transform="translate(282,134) scale(1.26)"/>
+          <use href="#hf-p" transform="translate(88,109)  scale(1.12)"/>
+          <use href="#hf-b" transform="translate(146,105) scale(1.22)"/>
+          <use href="#hf-l" transform="translate(204,108) scale(1.15)"/>
+          <use href="#hf-p" transform="translate(258,112) scale(1.10)"/>
+        </g>
+
+        <!-- Grupo derecho (espejo) -->
+        <g filter="url(#h-soft)">
+          <use href="#hf-p" transform="translate(958,178) scale(-1.15,1.15)"/>
+          <use href="#hf-b" transform="translate(902,172) scale(-1.22,1.22)"/>
+          <use href="#hf-l" transform="translate(844,168) scale(-1.18,1.18)"/>
+          <use href="#hf-p" transform="translate(786,170) scale(-1.14,1.14)"/>
+          <use href="#hf-b" transform="translate(732,174) scale(-1.08,1.08)"/>
+          <use href="#hf-b" transform="translate(930,155) scale(-1.36,1.36)"/>
+          <use href="#hf-l" transform="translate(872,150) scale(-1.42,1.42)"/>
+          <use href="#hf-p" transform="translate(814,149) scale(-1.40,1.40)"/>
+          <use href="#hf-b" transform="translate(757,153) scale(-1.32,1.32)"/>
+          <use href="#hf-l" transform="translate(704,158) scale(-1.20,1.20)"/>
+          <use href="#hf-l" transform="translate(946,132) scale(-1.28,1.28)"/>
+          <use href="#hf-b" transform="translate(888,128) scale(-1.46,1.46)"/>
+          <use href="#hf-p" transform="translate(830,125) scale(-1.50,1.50)"/>
+          <use href="#hf-l" transform="translate(772,129) scale(-1.40,1.40)"/>
+          <use href="#hf-b" transform="translate(718,134) scale(-1.26,1.26)"/>
+          <use href="#hf-p" transform="translate(912,109) scale(-1.12,1.12)"/>
+          <use href="#hf-b" transform="translate(854,105) scale(-1.22,1.22)"/>
+          <use href="#hf-l" transform="translate(796,108) scale(-1.15,1.15)"/>
+          <use href="#hf-p" transform="translate(742,112) scale(-1.10,1.10)"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       ITINERARIO
+       ══════════════════════════════════════ -->
+  <section class="section" id="itinerario">
+    <div class="container">
+
+      <div class="olive-divider reveal" aria-hidden="true">
+        <svg viewBox="0 0 500 68" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M242,34 Q195,16 148,28 Q110,38 68,26" stroke="#8fae8f" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+          <ellipse cx="196" cy="20" rx="14" ry="6" fill="#b0c4b0" transform="rotate(-28,196,20)" opacity="0.85"/>
+          <ellipse cx="170" cy="26" rx="13" ry="5.5" fill="#8fae8f" transform="rotate(-16,170,26)" opacity="0.80"/>
+          <ellipse cx="145" cy="29" rx="12" ry="5" fill="#b0c4b0" transform="rotate(-4,145,29)" opacity="0.75"/>
+          <ellipse cx="118" cy="30" rx="11" ry="4.5" fill="#8fae8f" transform="rotate(12,118,30)" opacity="0.78"/>
+          <ellipse cx="90"  cy="26" rx="10" ry="4" fill="#b0c4b0" transform="rotate(22,90,26)"   opacity="0.70"/>
+          <text x="250" y="39" font-family="Cormorant Garamond, serif" font-size="15" fill="#9ab5cc" text-anchor="middle" font-style="italic" opacity="0.65">✦</text>
+          <path d="M258,34 Q305,16 352,28 Q390,38 432,26" stroke="#8fae8f" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+          <ellipse cx="304" cy="20" rx="14" ry="6" fill="#b0c4b0" transform="rotate(28,304,20)"  opacity="0.85"/>
+          <ellipse cx="330" cy="26" rx="13" ry="5.5" fill="#8fae8f" transform="rotate(16,330,26)" opacity="0.80"/>
+          <ellipse cx="355" cy="29" rx="12" ry="5" fill="#b0c4b0" transform="rotate(4,355,29)"   opacity="0.75"/>
+          <ellipse cx="382" cy="30" rx="11" ry="4.5" fill="#8fae8f" transform="rotate(-12,382,30)" opacity="0.78"/>
+          <ellipse cx="410" cy="26" rx="10" ry="4" fill="#b0c4b0" transform="rotate(-22,410,26)" opacity="0.70"/>
+        </svg>
+      </div>
+
+      <div class="section-header reveal">
+        <p class="section-eyebrow">El gran día</p>
+        <h2 class="section-title">Itinerario</h2>
+      </div>
+
+      <div class="timeline-wrap">
+        <ol class="timeline" role="list">
+
+          <li class="timeline-item reveal">
+            <div class="timeline-time">17:00</div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <img src="Imagenes/toWEBP/AutobusIdaNF.webp" alt="Autobús de ida" class="timeline-img" loading="lazy">
+              <div class="timeline-info">
+                <h3>Autobús de ida</h3>
+                <p>Salida hacia Casa Santonja</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-time">18:30</div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <img src="Imagenes/toWEBP/CeremoniaNF.webp" alt="Recepción de invitados" class="timeline-img" loading="lazy">
+              <div class="timeline-info">
+                <h3>Recepción de invitados</h3>
+                <p>Bienvenida en Casa Santonja</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-time">19:00</div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <img src="Imagenes/toWEBP/AnillosNF.webp" alt="Ceremonia" class="timeline-img" loading="lazy">
+              <div class="timeline-info">
+                <h3>Ceremonia</h3>
+                <p>El momento más especial</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-time">20:00</div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <img src="Imagenes/toWEBP/CoctelNF.webp" alt="Cóctel" class="timeline-img" loading="lazy">
+              <div class="timeline-info">
+                <h3>Cóctel</h3>
+                <p>Brindemos juntos</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-time">21:30</div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <img src="Imagenes/toWEBP/CenaNF.webp" alt="Cena" class="timeline-img" loading="lazy">
+              <div class="timeline-info">
+                <h3>Cena</h3>
+                <p>Una velada inolvidable</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-time">00:00</div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <img src="Imagenes/toWEBP/FiestaNF.webp" alt="Fiesta" class="timeline-img" loading="lazy">
+              <div class="timeline-info">
+                <h3>Fiesta</h3>
+                <p>¡A bailar toda la noche!</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-time">01:30 · 04:30</div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <img src="Imagenes/toWEBP/AutobusVueltaNF.webp" alt="Autobús de vuelta" class="timeline-img" loading="lazy">
+              <div class="timeline-info">
+                <h3>Autobús de vuelta</h3>
+                <p>Dos salidas disponibles</p>
+              </div>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       HOTELES
+       ══════════════════════════════════════ -->
+  <section class="section section-alt" id="hoteles">
+    <div class="container">
+
+      <div class="olive-divider reveal" aria-hidden="true">
+        <svg viewBox="0 0 400 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M192,30 Q155,14 118,24 Q90,32 58,22" stroke="#8fae8f" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <ellipse cx="156" cy="17" rx="12" ry="5" fill="#b0c4b0" transform="rotate(-24,156,17)" opacity="0.82"/>
+          <ellipse cx="133" cy="23" rx="11" ry="4.5" fill="#8fae8f" transform="rotate(-10,133,23)" opacity="0.78"/>
+          <ellipse cx="110" cy="26" rx="10" ry="4" fill="#b0c4b0" transform="rotate(6,110,26)"   opacity="0.74"/>
+          <ellipse cx="86"  cy="24" rx="9"  ry="3.5" fill="#8fae8f" transform="rotate(18,86,24)" opacity="0.70"/>
+          <text x="200" y="35" font-family="Cormorant Garamond, serif" font-size="13" fill="#9ab5cc" text-anchor="middle" font-style="italic" opacity="0.60">✦</text>
+          <path d="M208,30 Q245,14 282,24 Q310,32 342,22" stroke="#8fae8f" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <ellipse cx="244" cy="17" rx="12" ry="5" fill="#b0c4b0" transform="rotate(24,244,17)"  opacity="0.82"/>
+          <ellipse cx="267" cy="23" rx="11" ry="4.5" fill="#8fae8f" transform="rotate(10,267,23)" opacity="0.78"/>
+          <ellipse cx="290" cy="26" rx="10" ry="4" fill="#b0c4b0" transform="rotate(-6,290,26)"  opacity="0.74"/>
+          <ellipse cx="314" cy="24" rx="9"  ry="3.5" fill="#8fae8f" transform="rotate(-18,314,24)" opacity="0.70"/>
+        </svg>
+      </div>
+
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Dónde alojarse</p>
+        <h2 class="section-title">Hoteles recomendados</h2>
+        <p class="section-sub">Algunos alojamientos cerca de Casa Santonja</p>
+      </div>
+
+      <div class="hotels-accordion reveal">
+
+        <details class="hotel-group">
+          <summary class="hotel-summary">
+            <span class="hotel-group-location">Beniarbeig</span>
+            <span class="hotel-group-label">Retiros y naturaleza</span>
+            <span class="hotel-count">1 hotel</span>
+            <span class="hotel-chevron" aria-hidden="true"></span>
+          </summary>
+          <ul class="hotel-list">
+            <li>
+              <a href="#" class="hotel-link" target="_blank" rel="noopener noreferrer">
+                Adhoc Vitae Retreats &amp; Health
+                <span class="hotel-link-arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+          </ul>
+        </details>
+
+        <details class="hotel-group">
+          <summary class="hotel-summary">
+            <span class="hotel-group-location">Ondara</span>
+            <span class="hotel-group-label">En el pueblo, muy cerca</span>
+            <span class="hotel-count">3 hoteles</span>
+            <span class="hotel-chevron" aria-hidden="true"></span>
+          </summary>
+          <ul class="hotel-list">
+            <li><a href="#" class="hotel-link" target="_blank" rel="noopener noreferrer">Hotel Ramis <span class="hotel-link-arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="#" class="hotel-link" target="_blank" rel="noopener noreferrer">Casona de las Flores <span class="hotel-link-arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="#" class="hotel-link" target="_blank" rel="noopener noreferrer">Hotel ASA <span class="hotel-link-arrow" aria-hidden="true">→</span></a></li>
+          </ul>
+        </details>
+
+        <details class="hotel-group">
+          <summary class="hotel-summary">
+            <span class="hotel-group-location">Dénia · Oliva</span>
+            <span class="hotel-group-label">Junto al mar</span>
+            <span class="hotel-count">4 hoteles</span>
+            <span class="hotel-chevron" aria-hidden="true"></span>
+          </summary>
+          <ul class="hotel-list">
+            <li><a href="#" class="hotel-link" target="_blank" rel="noopener noreferrer">Hotel Los Angeles <span class="hotel-link-arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="#" class="hotel-link" target="_blank" rel="noopener noreferrer">Hotel Rosa <span class="hotel-link-arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="#" class="hotel-link" target="_blank" rel="noopener noreferrer">Hotel Denia Marriott La Sella Golf Resort &amp; Spa <span class="hotel-link-arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="#" class="hotel-link" target="_blank" rel="noopener noreferrer">Oliva Nova Golf <span class="hotel-link-arrow" aria-hidden="true">→</span></a></li>
+          </ul>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       LISTA DE BODAS
+       ══════════════════════════════════════ -->
+  <section class="section" id="lista-bodas">
+    <div class="container">
+
+      <div class="olive-divider reveal" aria-hidden="true">
+        <svg viewBox="0 0 500 68" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M242,34 Q195,16 148,28 Q110,38 68,26" stroke="#8fae8f" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+          <ellipse cx="196" cy="20" rx="14" ry="6" fill="#b0c4b0" transform="rotate(-28,196,20)" opacity="0.85"/>
+          <ellipse cx="170" cy="26" rx="13" ry="5.5" fill="#8fae8f" transform="rotate(-16,170,26)" opacity="0.80"/>
+          <ellipse cx="145" cy="29" rx="12" ry="5" fill="#b0c4b0" transform="rotate(-4,145,29)" opacity="0.75"/>
+          <ellipse cx="118" cy="30" rx="11" ry="4.5" fill="#8fae8f" transform="rotate(12,118,30)" opacity="0.78"/>
+          <ellipse cx="90"  cy="26" rx="10" ry="4" fill="#b0c4b0" transform="rotate(22,90,26)"   opacity="0.70"/>
+          <text x="250" y="39" font-family="Cormorant Garamond, serif" font-size="15" fill="#9ab5cc" text-anchor="middle" font-style="italic" opacity="0.65">✦</text>
+          <path d="M258,34 Q305,16 352,28 Q390,38 432,26" stroke="#8fae8f" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+          <ellipse cx="304" cy="20" rx="14" ry="6" fill="#b0c4b0" transform="rotate(28,304,20)"  opacity="0.85"/>
+          <ellipse cx="330" cy="26" rx="13" ry="5.5" fill="#8fae8f" transform="rotate(16,330,26)" opacity="0.80"/>
+          <ellipse cx="355" cy="29" rx="12" ry="5" fill="#b0c4b0" transform="rotate(4,355,29)"   opacity="0.75"/>
+          <ellipse cx="382" cy="30" rx="11" ry="4.5" fill="#8fae8f" transform="rotate(-12,382,30)" opacity="0.78"/>
+          <ellipse cx="410" cy="26" rx="10" ry="4" fill="#b0c4b0" transform="rotate(-22,410,26)" opacity="0.70"/>
+        </svg>
+      </div>
+
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Si queréis</p>
+        <h2 class="section-title">Lista de bodas</h2>
+      </div>
+
+      <div class="lista-content reveal">
+        <p class="lista-text">
+          Compartir este día tan especial con vosotros es el mejor regalo
+          que podríamos tener, pero si queréis ayudarnos con el comienzo
+          de esta nueva etapa, os facilitamos el número de cuenta:
+        </p>
+        <div class="iban-card">
+          <p class="iban-label">Número de cuenta</p>
+          <code class="iban-number" id="iban-number">ES89 2100 6693 8902 0043 9391</code>
+          <button class="btn-copy" id="btn-copy" type="button" aria-label="Copiar número de cuenta al portapapeles">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            Copiar
+          </button>
+          <span class="copy-feedback" id="copy-feedback" role="status" aria-live="polite">¡Copiado!</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       NOTA — SOLO ADULTOS
+       ══════════════════════════════════════ -->
+  <section class="section-nota section-alt">
+    <div class="container">
+      <div class="nota-card reveal">
+        <span class="nota-icon" aria-hidden="true">✦</span>
+        <p class="nota-text">
+          Para que todos podamos disfrutar al máximo de la celebración,
+          hemos optado por un evento solo para adultos.
+          ¡Gracias por vuestra comprensión!
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       CTA — CONFIRMAR
+       ══════════════════════════════════════ -->
+  <section class="section section-cta" id="confirmar">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <p class="section-eyebrow">Esperamos verte allí</p>
+        <h2 class="section-title-script">¿Vendrás?</h2>
+        <p class="cta-deadline">
+          Se ruega confirmación antes del
+          <strong>1 de junio de 2026</strong>
+        </p>
+        <a href="confirmacion.html" class="btn btn-primary">Confirmar asistencia</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ══════════════════════════════════════
+     FOOTER — con hortensias SVG
+     ══════════════════════════════════════ -->
+<footer class="site-footer">
+  <!-- Hortensias adaptadas para fondo oscuro -->
+  <div class="hydrangea-wrap hydrangea-wrap--footer" role="img" aria-label="Decoración floral">
+    <svg class="hydrangea-band" viewBox="0 0 1000 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="hf-soft2" x="-15%" y="-15%" width="130%" height="130%">
+          <feGaussianBlur stdDeviation="0.8"/>
+        </filter>
+        <symbol id="ff-b" overflow="visible">
+          <ellipse cx="0" cy="-8.5" rx="5.5" ry="8.5" fill="#c8dde8" opacity="0.55"/>
+          <ellipse cx="8.5" cy="0" rx="8.5" ry="5.5" fill="#aac4d4" opacity="0.50"/>
+          <ellipse cx="0" cy="8.5" rx="5.5" ry="8.5" fill="#c8dde8" opacity="0.55"/>
+          <ellipse cx="-8.5" cy="0" rx="8.5" ry="5.5" fill="#aac4d4" opacity="0.50"/>
+          <circle cx="0" cy="0" r="2.2" fill="#e8f5fc" opacity="0.30"/>
+        </symbol>
+        <symbol id="ff-l" overflow="visible">
+          <ellipse cx="0" cy="-8.5" rx="5.5" ry="8.5" fill="#d5c8e0" opacity="0.50"/>
+          <ellipse cx="8.5" cy="0" rx="8.5" ry="5.5" fill="#c8b8d8" opacity="0.46"/>
+          <ellipse cx="0" cy="8.5" rx="5.5" ry="8.5" fill="#d5c8e0" opacity="0.50"/>
+          <ellipse cx="-8.5" cy="0" rx="8.5" ry="5.5" fill="#c8b8d8" opacity="0.46"/>
+          <circle cx="0" cy="0" r="2.2" fill="#ede8f8" opacity="0.30"/>
+        </symbol>
+        <symbol id="ff-p" overflow="visible">
+          <ellipse cx="0" cy="-8.5" rx="5.5" ry="8.5" fill="#daeaf4" opacity="0.52"/>
+          <ellipse cx="8.5" cy="0" rx="8.5" ry="5.5" fill="#c5dcea" opacity="0.48"/>
+          <ellipse cx="0" cy="8.5" rx="5.5" ry="8.5" fill="#daeaf4" opacity="0.52"/>
+          <ellipse cx="-8.5" cy="0" rx="8.5" ry="5.5" fill="#c5dcea" opacity="0.48"/>
+          <circle cx="0" cy="0" r="2.2" fill="#eaf5fc" opacity="0.30"/>
+        </symbol>
+      </defs>
+
+      <!-- Hojas tenues -->
+      <ellipse cx="72"  cy="128" rx="16" ry="8" fill="#a8c8a8" transform="rotate(-38,72,128)"  opacity="0.35"/>
+      <ellipse cx="132" cy="120" rx="18" ry="9" fill="#b8d4b8" transform="rotate(-22,132,120)" opacity="0.30"/>
+      <ellipse cx="200" cy="122" rx="15" ry="7" fill="#a8c8a8" transform="rotate(-8,200,122)"  opacity="0.32"/>
+      <ellipse cx="928" cy="128" rx="16" ry="8" fill="#a8c8a8" transform="rotate(38,928,128)"  opacity="0.35"/>
+      <ellipse cx="868" cy="120" rx="18" ry="9" fill="#b8d4b8" transform="rotate(22,868,120)"  opacity="0.30"/>
+      <ellipse cx="800" cy="122" rx="15" ry="7" fill="#a8c8a8" transform="rotate(8,800,122)"   opacity="0.32"/>
+
+      <!-- Grupo izquierdo -->
+      <g filter="url(#hf-soft2)">
+        <use href="#ff-p" transform="translate(42,155)  scale(1.10)"/>
+        <use href="#ff-b" transform="translate(95,148)  scale(1.18)"/>
+        <use href="#ff-l" transform="translate(150,145) scale(1.15)"/>
+        <use href="#ff-p" transform="translate(205,147) scale(1.10)"/>
+        <use href="#ff-b" transform="translate(255,151) scale(1.05)"/>
+        <use href="#ff-b" transform="translate(68,132)  scale(1.30)"/>
+        <use href="#ff-l" transform="translate(124,128) scale(1.38)"/>
+        <use href="#ff-p" transform="translate(180,126) scale(1.36)"/>
+        <use href="#ff-b" transform="translate(235,130) scale(1.26)"/>
+        <use href="#ff-l" transform="translate(54,112)  scale(1.20)"/>
+        <use href="#ff-b" transform="translate(110,108) scale(1.38)"/>
+        <use href="#ff-p" transform="translate(166,105) scale(1.42)"/>
+        <use href="#ff-l" transform="translate(220,108) scale(1.32)"/>
+        <use href="#ff-p" transform="translate(86,90)   scale(1.05)"/>
+        <use href="#ff-b" transform="translate(142,86)  scale(1.14)"/>
+        <use href="#ff-l" transform="translate(196,88)  scale(1.08)"/>
+      </g>
+
+      <!-- Grupo derecho -->
+      <g filter="url(#hf-soft2)">
+        <use href="#ff-p" transform="translate(958,155) scale(-1.10,1.10)"/>
+        <use href="#ff-b" transform="translate(905,148) scale(-1.18,1.18)"/>
+        <use href="#ff-l" transform="translate(850,145) scale(-1.15,1.15)"/>
+        <use href="#ff-p" transform="translate(795,147) scale(-1.10,1.10)"/>
+        <use href="#ff-b" transform="translate(745,151) scale(-1.05,1.05)"/>
+        <use href="#ff-b" transform="translate(932,132) scale(-1.30,1.30)"/>
+        <use href="#ff-l" transform="translate(876,128) scale(-1.38,1.38)"/>
+        <use href="#ff-p" transform="translate(820,126) scale(-1.36,1.36)"/>
+        <use href="#ff-b" transform="translate(765,130) scale(-1.26,1.26)"/>
+        <use href="#ff-l" transform="translate(946,112) scale(-1.20,1.20)"/>
+        <use href="#ff-b" transform="translate(890,108) scale(-1.38,1.38)"/>
+        <use href="#ff-p" transform="translate(834,105) scale(-1.42,1.42)"/>
+        <use href="#ff-l" transform="translate(780,108) scale(-1.32,1.32)"/>
+        <use href="#ff-p" transform="translate(914,90)  scale(-1.05,1.05)"/>
+        <use href="#ff-b" transform="translate(858,86)  scale(-1.14,1.14)"/>
+        <use href="#ff-l" transform="translate(804,88)  scale(-1.08,1.08)"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="footer-content">
+    <p class="footer-names">Ester &amp; Gaby</p>
+    <p class="footer-meta">11 de julio de 2026 &nbsp;·&nbsp; Con amor</p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

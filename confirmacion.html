@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Confirma tu asistencia a la boda de Ester y Gaby · 11 de julio de 2026">
+  <title>Confirmar asistencia · Ester &amp; Gaby</title>
+
+  <link rel="icon" type="image/png" href="Imagenes/Favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Great+Vibes&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="form-page">
+
+<!-- ══════════════════════════════════════
+     NAVEGACIÓN
+     ══════════════════════════════════════ -->
+<header class="site-header" id="site-header">
+  <nav class="nav-wrap" aria-label="Navegación principal">
+    <a href="index.html" class="nav-logo" aria-label="Volver al inicio">E &amp; G</a>
+
+    <button
+      class="nav-toggle"
+      id="nav-toggle"
+      aria-label="Abrir menú de navegación"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+    >
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-menu" id="nav-menu" role="list">
+      <li><a href="index.html#itinerario">Itinerario</a></li>
+      <li><a href="index.html#hoteles">Alojamiento</a></li>
+      <li><a href="index.html#lista-bodas">Lista de bodas</a></li>
+      <li><a href="confirmacion.html" class="nav-cta-link">Confirmar asistencia</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ══════════════════════════════════════
+       HERO DEL FORMULARIO
+       ══════════════════════════════════════ -->
+  <div class="form-hero">
+    <!-- Banda floral arriba (espejo) -->
+    <div class="floral-band floral-band--alt" role="img" aria-label="Decoración floral de hortensias en acuarela"
+         style="transform: scaleY(-1) scaleX(-1); background-image: linear-gradient(to bottom, var(--bg) 0%, transparent 40%), url('Imagenes/savethedate.JPG');"></div>
+
+    <div class="form-hero-text">
+      <h1 class="form-hero-names">Ester &amp; Gaby</h1>
+      <p class="form-hero-sub">¡Queremos contar contigo!</p>
+      <p class="form-hero-deadline">Confirma antes del 1 de junio de 2026</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       FORMULARIO RSVP
+       ══════════════════════════════════════ -->
+  <div class="form-wrapper">
+
+    <!--
+      ╔═══════════════════════════════════════════════════════════╗
+      ║  GOOGLE APPS SCRIPT                                       ║
+      ║  Cuando tengas la URL del Web App, sustitúyela aquí:      ║
+      ║  action="https://script.google.com/macros/s/XXXX/exec"   ║
+      ╚═══════════════════════════════════════════════════════════╝
+    -->
+    <form
+      id="rsvp-form"
+      class="rsvp-form"
+      action="PENDIENTE_URL_APPS_SCRIPT"
+      method="POST"
+      novalidate
+    >
+
+      <!-- ── 1. Nombre y apellidos ── -->
+      <div class="form-group">
+        <label class="form-label" for="nombre">
+          Nombre y apellidos <span class="req" aria-label="obligatorio">*</span>
+        </label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          class="form-input"
+          placeholder="Tu nombre y apellidos completos"
+          required
+          autocomplete="name"
+        >
+      </div>
+
+      <!-- ── 2. Acompañantes ── -->
+      <div class="form-group">
+        <label class="form-label" for="acompanantes">
+          Nº de acompañantes y nombre y apellidos <span class="req" aria-label="obligatorio">*</span>
+        </label>
+        <textarea
+          id="acompanantes"
+          name="acompanantes"
+          class="form-textarea"
+          rows="3"
+          placeholder="Ej: 2 acompañantes — Juan García Pérez y María López Ruiz. Si vienes solo/a escribe «ninguno»."
+          required
+        ></textarea>
+      </div>
+
+      <!-- ── 3. Alergias ── -->
+      <div class="form-group">
+        <label class="form-label" for="alergias">
+          Alergias o intolerancias <span class="opt">(opcional)</span>
+        </label>
+        <textarea
+          id="alergias"
+          name="alergias"
+          class="form-textarea"
+          rows="2"
+          placeholder="Ej: gluten, lactosa, frutos secos… Si no tienes ninguna, déjalo en blanco."
+        ></textarea>
+      </div>
+
+      <hr class="form-divider">
+
+      <!-- ── 4 & 5. Autobús ── -->
+      <fieldset class="bus-fieldset">
+        <legend class="bus-legend">
+          Autobús <span style="font-family:var(--font-serif); font-style:italic; font-weight:300; text-transform:none; letter-spacing:0; font-size:0.85rem; color:var(--text-xlight);">(opcional)</span>
+        </legend>
+
+        <!-- Ida -->
+        <p class="bus-sublabel">Ida</p>
+        <label class="check-label">
+          <input type="checkbox" name="autobus_ida" id="autobus_ida" value="Sí, autobús de ida (17:00)">
+          Sí, quiero el autobús de ida (salida a las 17:00)
+        </label>
+
+        <!-- Vuelta (radio excluyente) -->
+        <p class="bus-sublabel">Vuelta</p>
+        <div role="radiogroup" aria-label="Selecciona la hora de vuelta del autobús">
+          <label class="radio-label">
+            <input type="radio" name="autobus_vuelta" value="Sin autobús de vuelta" checked>
+            No necesito autobús de vuelta
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="autobus_vuelta" value="Vuelta 01:30">
+            Vuelta a la 01:30
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="autobus_vuelta" value="Vuelta 04:30">
+            Vuelta a las 04:30
+          </label>
+        </div>
+      </fieldset>
+
+      <hr class="form-divider">
+
+      <!-- ── 6. Mensaje ── -->
+      <div class="form-group">
+        <label class="form-label" for="mensaje">
+          Mensaje para los novios <span class="opt">(opcional)</span>
+        </label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          class="form-textarea"
+          rows="3"
+          placeholder="¿Quieres decirnos algo? ¡Nos encantará leerlo!"
+        ></textarea>
+      </div>
+
+      <!-- ── Enviar ── -->
+      <div class="form-actions">
+        <button type="submit" class="submit-btn" id="submit-btn">
+          <span id="btn-text">Confirmar asistencia</span>
+        </button>
+      </div>
+
+      <!-- Estado: éxito / error -->
+      <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
+
+    </form>
+  </div>
+
+</main>
+
+
+<!-- ══════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="floral-band-footer" role="img" aria-label="Decoración floral de hortensias en acuarela"></div>
+  <div class="footer-content">
+    <p class="footer-names">Ester &amp; Gaby</p>
+    <p class="footer-meta">11 de julio de 2026 &nbsp;·&nbsp; Con amor</p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
