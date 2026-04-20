@@ -926,20 +926,20 @@ button { cursor: pointer; font-family: inherit; }
 
 /* Fieldset autobús */
 .bus-fieldset {
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.25rem 1.25rem 0.75rem;
-  background: var(--bg-alt);
+  border: none;
+  padding: 0;
   margin-bottom: 1.6rem;
 }
 .bus-legend {
+  display: block;
   font-family: var(--font-sans);
   font-size: 0.65rem;
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text);
-  padding: 0 0.4rem;
+  margin-bottom: 0.5rem;
+  padding: 0;
 }
 .bus-sublabel {
   font-family: var(--font-sans);
@@ -950,6 +950,13 @@ button { cursor: pointer; font-family: inherit; }
   margin: 1rem 0 0.5rem;
 }
 .bus-sublabel:first-of-type { margin-top: 0.75rem; }
+.bus-place {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--text-light);
+  margin: 0.2rem 0 0 1.65rem;
+}
 
 /* Checkbox & Radio custom */
 .check-label,
