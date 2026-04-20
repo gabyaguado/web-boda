@@ -171,11 +171,13 @@ button { cursor: pointer; font-family: inherit; }
 }
 
 .nav-logo {
-  font-family: 'Parisienne', cursive;
-  font-size: 2rem;
-  color: var(--text);
   line-height: 1;
   flex-shrink: 0;
+}
+.nav-logo-img {
+  height: 52px;
+  width: auto;
+  display: block;
 }
 
 /* Hamburger */
