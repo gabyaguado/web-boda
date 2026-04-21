@@ -829,10 +829,10 @@ button { cursor: pointer; font-family: inherit; }
 }
 .footer-powered {
   font-family: var(--font-sans);
-  font-size: 0.5rem;
+  font-size: 0.4rem;
   letter-spacing: 0.15em;
   color: var(--text-xlight);
-  opacity: 0.5;
+  opacity: 0.35;
   margin-top: 0.75rem;
 }
 
