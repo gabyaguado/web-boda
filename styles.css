@@ -265,6 +265,7 @@ button { cursor: pointer; font-family: inherit; }
 .hero {
   background: var(--bg);
   overflow: hidden;
+  scroll-margin-top: 60px;
 }
 
 .hero-inner {
